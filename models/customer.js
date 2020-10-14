@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   var Customers = sequelize.define("Customer", {
-    first_name: DataTypes.STRING,
-    last_name: DataTypes.STRING,
+    first_Name: DataTypes.STRING,
+    last_Name: DataTypes.STRING,
     email: DataTypes.STRING, 
   });
 
