@@ -7,8 +7,12 @@ module.exports = function (app) {
     res.render("../views/layouts/main");
   });
 
-  app.get("/signup", function (req, res) {
-    res.render("../views/layouts/signup");
+  app.get("/vendor-signup", function (req, res) {
+    res.render("../views/layouts/vendor-signup");
+  });
+
+  app.get("/customer-signup", function (req, res) {
+    res.render("../views/layouts/customer-signup");
   });
 
   app.get("/vendor", function (req, res) {
