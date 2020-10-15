@@ -1,13 +1,30 @@
-<div class="top-bar">
-    <div class="top-bar-left">
-        <h1>Cultural Bash</h1>
-        <ul class="right">
-            {{!-- <li><a href="#">Vendor Login</a></li>
-            <li><a href="#">Customer Login</a></li> --}}
-            <li><button id="myBtn">Login</button></li>
-        </ul>
-    </div>
+{{!-- NavBar --}}
+
+<div class="top-bar" id="example-menu">
+  <div class="top-bar-left">
+    <ul class="dropdown menu">
+      <li class="menu-text site-title-font" id="navbar-title">Cultural Bash</li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><a href="#0">Inspiration</a></li>
+      <li><a href="#0">About</a></li>
+      <li><a href="#0"><button id="myBtn">Login</button></a></li>
+    </ul>
+  </div>
 </div>
+{{!-- Site Title and Paragraph --}}
+<div class="row grid-x grid-padding-x align-center-middle text-center top-space">
+    <div class="cell small-5 medium-8 large-7 main-body">
+        <h2 class="site-title-font">Cultural Bash</h2>
+        <p>With a focus on your culture and community. Let's build dream events together</p>
+        <div class="row grid-x grid-padding-x align-spaced top-space">
+            <a class="button pink-button" href="/customer-signup">CUSTOMER</a>
+            <a class="button yellow-button" href="/vendor-signup">VENDOR</a>
+        </div>
+</div>
+
 
 
 <!-- The Modal -->
@@ -25,14 +42,10 @@
                 <input type="password" placeholder="Password">
             </label>
             <input id="show-password" type="checkbox"><label for="show-password">Show password</label>
-            <p><input type="submit" class="button expanded" value="Log in"></input></p>
+            <p><input type="submit" class="button expanded pink-button" value="Log in"></input></p>
             <p class="text-center"><a href="#">Forgot your password?</a></p>
         </form>
     </div>
 
 </div>
 
-
-<a class="button" href="/vendor-signup">Vendor</a>
-<br>
-<a class="button" href="/customer-signup">Customer</a>
