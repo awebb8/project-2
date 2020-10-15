@@ -25,6 +25,7 @@ module.exports = function (sequelize, DataTypes) {
 		Event.hasMany(models.Service, {
 			onDelete: "cascade",
 		});
+		
 	};
 
 	return Event;
