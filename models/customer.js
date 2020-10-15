@@ -1,16 +1,21 @@
-module.exports = function(sequelize, DataTypes) {
-  var Customers = sequelize.define("Customer", {
-    first_Name: DataTypes.STRING,
-    last_Name: DataTypes.STRING,
-    email: DataTypes.STRING, 
-  });
+module.exports = function (sequelize, DataTypes) {
+	const Customer = sequelize.define("Customer", {
+		first_Name: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+		last_Name: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+		email: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+	});
 
-  Customers.associate = function(models) {
-      Customers.hasMany(models.Events)
-  };
-  return Customers;
+	Customer.associate = function (models) {
+		Customer.hasMany(models.Event);
+	};
+	return Customer;
 };
-
-Customers.sync();
-
-module.exports = Customers;

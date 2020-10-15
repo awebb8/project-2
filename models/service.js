@@ -6,27 +6,22 @@ module.exports = function (sequelize, DataTypes) {
 	Service.associate = function (models) {
 		// Associating Service with Services
 		// When an Service is deleted, also delete any associated Services
-		Service.belongsTo(models.Events, {
+		Service.belongsTo(models.Event, {
 			foreignKey: {
-				name: event_id,
 				allowNull: false,
 			},
 		});
-		Service.belongsTo(models.Categories, {
+		Service.hasMany(models.Category, {
 			foreignKey: {
-				name: categoryId,
 				allowNull: false,
 			},
 		});
 		Service.belongsTo(models.Vendor, {
 			foreignKey: {
-				name: chosen_vendor_id,
 				allowNull: true,
 			},
 		});
 	};
-
-	Service.sync();
 
 	return Service;
 };
