@@ -46,7 +46,7 @@ $(document).ready(function() {
       })
         .then(function(data) {
           window.location.replace("/vendor");
-          // If there's an error, handle it by throwing up a bootstrap alert
+          // If there's an error, handle it by throwing up a Foundation alert
         })
         .catch(handleLoginErr);
     }
