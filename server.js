@@ -1,6 +1,8 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const app = express();
+const db = require("./models");
+//const dotenv = require("dotenv").config();
 
 const PORT = process.env.PORT || 8080;
 
@@ -12,14 +14,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.render("index");
+	res.render("index");
 });
 
 app.get("/api/config", (req, res) => {
-    res.json({
-        success: true,
-    })
-})
+	res.json({
+		success: true,
+	});
+});
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
@@ -30,7 +32,15 @@ require("./routes/html-routes.js")(app);
 // app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
-});
+
+db.sequelize
+	//.sync()
+	.sync({ force: true })
+	.then(function () {
+		app.listen(PORT, function () {
+			console.log("Server listening on: http://localhost:" + PORT);
+		});
+	});
+// .catch(function (err, res) {
+// 	res.status(401).json(err);
+// });
