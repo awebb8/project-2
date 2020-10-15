@@ -1,1 +1,110 @@
-Customer page
+<html lang="en">
+
+<head>
+    <title>Customer Services Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link href="/assets/css/customer-services.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">Cultural Bash</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="holy-grail-grid">
+        <div class="holy-grail-header">
+            <h3>Profile Page</h3>
+        </div>
+
+        <div class="holy-grail-left">
+            <h3>Past Events</h3>
+            <ul>
+                <li><a href="#">Event 1 ID/Name Here</a></li>
+                <li><a href="#">Event 2 ID/Name Here</a></li>
+                <li><a href="#">Event 3 ID/Name Here</a></li>
+            </ul>
+        </div>
+
+        <div class="holy-grail-middle ">
+            <div class="card-user-container">
+                <div class="card-user-avatar">
+                    <img src="https://placehold.it/200x200" alt="" class="user-image">
+                </div>
+                <div class="card-user-bio">
+                    <h4>Full Name</h4>
+                    <p>Email Here</p>
+                    <span class="location"><span class="location-icon fa fa-map-marker"></span><span
+                            class="location-text">City and State Here</span></span>
+                </div>
+            </div>
+            <div class="card-user-container text-center" id="upcoming-events">
+                <h3> My Upcoming Events</h3>
+                <table>
+                    <tr>
+                        <th>Event ID</th>
+                        <th>Event Name</th>
+                        <th>Event Date</th>
+                        <th>Event Time</th>
+                        <th>Event Location</th>
+                        <th>Vendor Bids</th>
+                    </tr>
+                    <tr>
+                        <td>Sample ID</td>
+                        <td>Random Name</td>
+                        <td>Random Date</td>
+                        <td>Random Time</td>
+                        <td>Random Location</td>
+                        <td>Random Bids</td>
+                    </tr>
+                    <tr>
+                        <td>Sample ID</td>
+                        <td>Random Name</td>
+                        <td>Random Date</td>
+                        <td>Random Time</td>
+                        <td>Random Location</td>
+                        <td>Random Bids</td>
+                    </tr>
+                    <tr>
+                        <td>Sample ID</td>
+                        <td>Random Name</td>
+                        <td>Random Date</td>
+                        <td>Random Time</td>
+                        <td>Random Location</td>
+                        <td>Random Bids</td>
+                    </tr>
+                </table>
+                <button class="button expand" id="create-event-button">Create an Event</button>
+            </div>
+
+            <div class="card-user-container hide" id="create-events">
+                <h3 class="text-center"> Create an Event Here </h3>
+                <form class="event-creation-group" action="">
+                    <input class="event-creation-input" type="text" placeholder="Event Name">
+                    <input class="event-creation-input" type="date" placeholder="Event Date">
+                    <input class="event-creation-input" type="time" placeholder="Start Time">
+                    <input class="event-creation-input" type="time" placeholder="End Time">
+                    <input class="event-creation-input" type="text" placeholder="Address">
+                    <input class="event-creation-input" type="text" placeholder="City">
+                    <input class="event-creation-input" type="text" placeholder="State">
+                    <input class="event-creation-input" type="number" placeholder="Zipcode">
+                    <input class="event-creation-submit-button" type="submit" value="Next">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/customer-services.js"></script>
+
+</body>
+
+</html>
