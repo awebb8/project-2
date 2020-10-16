@@ -1,8 +1,8 @@
+require("dotenv").config();
 const express = require("express");
 const exphbs = require("express-handlebars");
 const app = express();
 const db = require("./models");
-//const dotenv = require("dotenv").config();
 
 const PORT = process.env.PORT || 8080;
 
@@ -29,6 +29,8 @@ app.set("view engine", "handlebars");
 // Import routes and give the server access to them.
 // var routes = require("./controllers/bidbash-controller.js");
 require("./routes/html-routes.js")(app);
+require("./routes/customer-api-routes.js")(app);
+require("./routes/api-routes.js")(app);
 // app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
