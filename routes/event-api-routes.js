@@ -1,7 +1,7 @@
 const db = require("../models");
 
 module.exports = function (app) {
-	app.get("/api/events", function (req, res) {
+	app.get("/api/event", function (req, res) {
 		// Here we add an "include" property to our options in our findAll query
 		// We set the value to an array of the models we want to include in a left outer join
 		// In this case, just db.Event
@@ -12,7 +12,7 @@ module.exports = function (app) {
 		});
 	});
 
-	app.get("/api/Events/:id", function (req, res) {
+	app.get("/api/events/:id", function (req, res) {
 		// Here we add an "include" property to our options in our findOne query
 		// We set the value to an array of the models we want to include in a left outer join
 		// In this case, just db.Event
@@ -20,24 +20,26 @@ module.exports = function (app) {
 			where: {
 				id: req.params.id,
 			},
-			include: [db.Event],
+			include: [db.service],
 		}).then(function (dbEvent) {
 			res.json(dbEvent);
 		});
 	});
-
+	app.get("/api/customer-create", function (req, res) {
+		res.json("hello");
+	});
 	app.post("/api/customer-create-event", function (req, res) {
 		db.Event.create({
 			eventName: req.body.eventName,
-			eventType: req.body.eventType,
-			guestCount: req.body.guestCount,
 			eventDate: req.body.eventDate,
 			startTime: req.body.startTime,
 			endTime: req.body.endTime,
+			eventType: req.body.eventType,
+			guestCount: req.body.guestCount,
 			address: req.body.address,
 			city: req.body.city,
 			state: req.body.state,
-			zipCode: req.body.state,
+			zipCode: req.body.zipCode,
 			description: req.body.description,
 		})
 			.then(function (dbEvent) {
@@ -48,13 +50,13 @@ module.exports = function (app) {
 			});
 	});
 
-	app.delete("/api/Events/:id", function (req, res) {
+	app.delete("/api/events/:id", function (req, res) {
 		db.Event.destroy({
 			where: {
 				id: req.params.id,
 			},
 		}).then(function (dbEvent) {
-			res.json(dbCustomer);
+			res.json(dbEvent);
 		});
 	});
 };

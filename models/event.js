@@ -1,19 +1,19 @@
 module.exports = function (sequelize, DataTypes) {
 	const Event = sequelize.define("Event", {
-		name: {
+		eventName: {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
-		date: {
+		eventDate: {
 			type: DataTypes.DATE,
 			allowNull: false,
 		},
 		startTime: {
-			type: DataTypes.TIME,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		endTime: {
-			type: DataTypes.TIME,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		eventType: {
@@ -21,7 +21,7 @@ module.exports = function (sequelize, DataTypes) {
 			allowNull: false,
 		},
 		guestCount: {
-			type: DataTypes.INT,
+			type: DataTypes.INTEGER,
 			allowNull: false,
 		},
 		address: {
@@ -37,7 +37,7 @@ module.exports = function (sequelize, DataTypes) {
 			allowNull: false,
 		},
 		zipCode: {
-			type: DataTypes.INT,
+			type: DataTypes.INTEGER,
 			allowNull: false,
 		},
 		description: {
