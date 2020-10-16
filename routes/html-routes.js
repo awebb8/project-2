@@ -39,9 +39,9 @@ module.exports = function (app) {
 		res.render("../views/layouts/customer-create-event");
 	});
 
-	app.get("/customer-service-request", function (req, res) {
-		res.render("../views/layouts/customer-service-request");
-	});
+  app.get("/services", function (req, res) {
+    res.render("../views/layouts/services-events");
+  });
 
 	app.get("/vendor-bid", function (req, res) {
 		res.render("../views/layouts/vendor-bid");
