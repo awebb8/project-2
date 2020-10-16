@@ -30,4 +30,8 @@ module.exports = function (app) {
   app.get("/customer", function (req, res) {
     res.render("../views/layouts/customer-services");
   });
+
+  app.get("/event", function (req, res) {
+    res.render("../views/layouts/customer-event-page");
+  });
 };
