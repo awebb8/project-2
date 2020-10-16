@@ -1,4 +1,5 @@
 const db = require("../models");
+const passport = require("../config/passport");
 
 module.exports = function (app) {
 	app.get("/api/customers", function (req, res) {
@@ -28,6 +29,10 @@ module.exports = function (app) {
 		}).then(function (dbCustomer) {
 			res.json(dbCustomer);
 		});
+	});
+
+	app.post("/api/customer-login", passport.authenticate("local"), function (req, res) {
+		res.json(req.Customer);
 	});
 
 	app.post("/api/customer-signup", function (req, res) {
