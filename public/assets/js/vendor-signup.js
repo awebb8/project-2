@@ -48,7 +48,7 @@ $(document).ready(function() {
           window.location.replace("/vendor");
           // If there's an error, handle it by throwing up a Foundation alert
         })
-        .catch(handleLoginErr);
+        .catch(err => console.log(err));
     }
   
     function handleLoginErr(err) {
