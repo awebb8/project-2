@@ -4,19 +4,43 @@ module.exports = function (sequelize, DataTypes) {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
-		date: {
+		eventDate: {
 			type: DataTypes.DATE,
 			allowNull: false,
 		},
 		startTime: {
-			type: DataTypes.TIME,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		endTime: {
-			type: DataTypes.TIME,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 		eventType: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+		guestCount: {
+			type: DataTypes.INTEGER,
+			allowNull: false,
+		},
+		address: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+		city: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+		state: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+		zipCode: {
+			type: DataTypes.INTEGER,
+			allowNull: false,
+		},
+		description: {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
