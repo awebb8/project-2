@@ -1,7 +1,7 @@
 const db = require("../models");
 
 module.exports = function (app) {
-	app.get("/api/", function (req, res) {
+	app.get("/api/customers", function (req, res) {
 		// Here we add an "include" property to our options in our findAll query
 		// We set the value to an array of the models we want to include in a left outer join
 		// In this case, just db.Event
@@ -28,8 +28,6 @@ module.exports = function (app) {
 
 	app.post("/api/customer-signup", function (req, res) {
 		db.Customer.create({
-			business_Name: req.body.business_Name,
-			category: req.body.category,
 			first_Name: req.body.first_Name,
 			last_Name: req.body.last_Name,
 			email: req.body.email,
