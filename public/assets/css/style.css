@@ -19,6 +19,13 @@ body{
 #navbar-title {
   font-size: 16pt;
 }
+/* FOOTER STYLING */
+.footer {
+  background-color: black;
+  position:fixed;
+  width: 100%;
+  bottom:0;
+}
 /* HOME PAGE STYLING */
 h2 {
   font-weight: bold;
@@ -103,14 +110,8 @@ h2 {
   color: #FDC366;
   cursor: pointer;
 }
-
-.footer {
-  background-color: black;
-  position:fixed;
-  bottom:0;
-}
-
 /* CUSTOMER-EVENT-PAGE */
+/* background box */
 .event-box {
   background-color: white;
   border: solid 5px black;
@@ -118,6 +119,13 @@ h2 {
   margin-left: 15%;
   padding: 20px;
   align-content: center;
+}
+/* box title */
+.title-underline {
+  border-bottom: solid 1px black;
+  color: #D60042;
+  text-align: center;
+  margin-bottom: 20px;
 }
 /* The Event Information Display Styling */
 .event-info-display {
@@ -131,11 +139,9 @@ h2 {
   font-weight: bold;
 }
 /* The Service Card Styling */
-
 .service-card h5 {
   background-color: black;
   border-bottom: solid 1px #FDC366;
-
 }
 .service-card {
   background-color: black;
@@ -143,16 +149,30 @@ h2 {
   color: white;
   padding: 7px;
   justify-content: center;
-  
 }
-.title-underline {
-  border-bottom: solid 1px black;
-  color: #D60042;
-  text-align: center;
-  margin-bottom: 20px;
-}
+/* highlighted event name */
 .yellow-background {
   background-color: #FDC366;
   margin-right: 15px;
   padding-left: 10px;
+}
+/* CUSTOMER CREATE EVENT PAGE */
+/* background box */
+.create-event-box {
+  background-color: #D60042;
+  border: solid 5px black;
+  max-width: 70%;
+  align-self: center;
+  padding: 20px;
+}
+/* event creation form title */
+.event-create-title {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* changing labels to white and bold */
+label {
+  color: white;
+  font-weight: bold;
 }
