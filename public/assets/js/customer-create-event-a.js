@@ -1,4 +1,3 @@
-// allow the description text area to auto expand as user types
 $('textarea').each(function () {
     this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
   }).on('input', function () {
