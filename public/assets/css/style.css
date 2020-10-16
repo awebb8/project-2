@@ -4,7 +4,9 @@ body{
 }
 /* Font for site title in nav bar and homepage */
 .site-title-font {
-    font-family: serif;
+  font-family: 'Cookie', cursive;
+  font-size: 50pt;
+  font-weight: normal;
 }
 /* NAVBAR BACKGROUND COLOR */
 .top-bar,
@@ -17,7 +19,8 @@ body{
 }
 /* NAVBAR TITLE FONTSIZE */
 #navbar-title {
-  font-size: 16pt;
+  font-size: 20pt;
+  font-weight: normal;
 }
 /* FOOTER STYLING */
 .footer {
@@ -27,9 +30,7 @@ body{
   bottom:0;
 }
 /* HOME PAGE STYLING */
-h2 {
-  font-weight: bold;
-}
+
 .top-space {
   margin-top: 40px;
 }
@@ -129,6 +130,7 @@ h2 {
 /* box title */
 .title-underline {
   border-bottom: solid 1px black;
+  font-family: 'Cormorant Infant', serif;
   color: #D60042;
   text-align: center;
   margin-bottom: 20px;
@@ -141,7 +143,7 @@ h2 {
   font-size: 20px;
 }
 .event-info-display h4 {
-  font-family: serif;
+  font-family: 'Cormorant Infant', serif;
   font-weight: bold;
 }
 /* The Service Card Styling */
@@ -166,7 +168,7 @@ h2 {
 /* CUSTOMER CREATE EVENT PAGE 1 */
 /* background box */
 .create-event-box {
-  background-color: #D60042;
+  background-color: #FDC366;
   border-radius: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   max-width: 70%;
@@ -175,14 +177,15 @@ h2 {
 }
 /* event creation form title */
 .event-create-title {
-  color: white;
-  font-family: serif;
+  color: black;
+  font-family: 'Cormorant Infant', serif;
+  font-size: 40pt;
   text-align: center;
   margin-bottom: 20px;
 }
 /* changing labels to white and bold */
 label {
-  color: white;
+  color: black;
 
 }
 /* CUSTOMER CREATE EVENT PAGE 2 */
