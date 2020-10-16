@@ -11,8 +11,16 @@ module.exports = function (app) {
     res.render("../views/layouts/vendor-signup");
   });
 
+  app.get("/vendor-login", function (req, res) {
+    res.render("../views/partials/vendor-login");
+  });
+
   app.get("/customer-signup", function (req, res) {
     res.render("../views/layouts/customer-signup");
+  });
+
+  app.get("/customer-login", function (req, res) {
+    res.render("../views/partials/customer-login");
   });
 
   app.get("/vendor", function (req, res) {
