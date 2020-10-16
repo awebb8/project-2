@@ -1,6 +1,6 @@
 /* BACKGROUND IMAGE */
 body{
-  background-image: url("https://image.freepik.com/free-vector/beautiful-indian-traditional-seamless-pattern-black-white_1442-5757.jpg"); 
+  background-image: url("https://freedesignfile.com/upload/2015/05/Paper-floral-white-seamless-pattern-vector.jpg"); 
 }
 /* Font for site title in nav bar and homepage */
 .site-title-font {
@@ -35,7 +35,8 @@ h2 {
 }
 .main-body {
   background-color: rgb(255, 255, 255);
-  border: solid 5px black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 25px;
   height: 50%;
   width: 70%;
   padding: 10%;
@@ -91,33 +92,38 @@ h2 {
 /* YELLOW BUTTONS */
 .yellow-button {
   background-color: #FDC366;
+  border-radius: 25px;
   color: black;
 }
 .yellow-button:hover,
 .yellow-button:focus {
   background-color: rgb(0, 0, 0);
   color: #D60042;
+  border-radius: 25px;
   cursor: pointer;
 }
 /* PINK BUTTONS */
 .pink-button {
   background-color: #D60042;
+  border-radius: 25px;
   color: white;
 }
 .pink-button:hover,
 .pink-button:focus {
   background-color: rgb(0, 0, 0);
   color: #FDC366;
+  border-radius: 25px;
   cursor: pointer;
 }
 /* CUSTOMER-EVENT-PAGE */
 /* background box */
 .event-box {
   background-color: white;
-  border: solid 5px black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   max-width: 70%;
   margin-left: 15%;
   padding: 20px;
+  border-radius: 25px;
   align-content: center;
 }
 /* box title */
@@ -149,6 +155,7 @@ h2 {
   color: white;
   padding: 7px;
   justify-content: center;
+  border-radius: 25px;
 }
 /* highlighted event name */
 .yellow-background {
@@ -160,7 +167,8 @@ h2 {
 /* background box */
 .create-event-box {
   background-color: #D60042;
-  border: solid 5px black;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   max-width: 70%;
   align-self: center;
   padding: 20px;
@@ -168,13 +176,14 @@ h2 {
 /* event creation form title */
 .event-create-title {
   color: white;
+  font-family: serif;
   text-align: center;
   margin-bottom: 20px;
 }
 /* changing labels to white and bold */
 label {
   color: white;
-  font-weight: bold;
+
 }
 /* CUSTOMER CREATE EVENT PAGE 2 */
 .chosen-service{

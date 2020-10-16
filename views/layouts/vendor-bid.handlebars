@@ -1,0 +1,61 @@
+{{!-- NavBar --}}
+<div class="top-bar" id="example-menu">
+  <div class="top-bar-left">
+    <ul class="dropdown menu">
+      <li class="menu-text site-title-font" id="navbar-title">Cultural Bash</li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><a href="/create-event-a">Create an Event</a></li>
+      <li><a href="/customer">Profile</a></li>
+      <li><a href="/customer-login"><button id="myBtn">Login</button></a></li>
+    </ul>
+  </div>
+</div>
+{{!-- BACKGROUND BOX where Event info and Service Cards will be displayed --}}
+<div class="grid-container event-box top-space">
+    <div class="grid-x">
+        <div class="cell">
+             <h2 class="title-underline">MY BIDS</h2>
+        </div>
+    </div>
+    <div class="grid-x text-center">
+        <div class="cell small-6">
+            {{!-- ACTIVE BID CARD EXAMPLE 1 --}}
+            <div class="card">
+                <div class="card-section">
+                    <img src="assets/img/generic/rectangle-1.jpg">
+                </div>
+                <div class="card-section">
+                    <p>This is a simple card with an image inside a `.card-section`.</p>
+                </div>
+            </div>
+     
+            {{!-- ACTIVE BID CARD EXAMPLE 2 --}}
+            <div class="card">
+                <div class="card-section">
+                    <img src="assets/img/generic/rectangle-1.jpg">
+                </div>
+                <div class="card-section">
+                    <p>This is a simple card with an image inside a `.card-section`.</p>
+                </div>
+            </div>
+        </div>
+        <div class="cell small-6">
+            {{!-- ACCEPTED BID CARD EXAMPLE 1 --}}
+            <div class="card">
+                <div class="card-section">
+                    <img src="assets/img/generic/rectangle-1.jpg">
+                </div>
+                <div class="card-section">
+                    <p>This is a simple card with an image inside a `.card-section`.</p>
+                </div>
+                </div>
+        </div>
+    </div>  
+</div>
+{{!-- FOOTER possibly add copywrite like project 1, for now there is an h3 placeholder  --}}
+<div class="cell shrink footer">
+    <h3>copywrite</h3>
+  </div>
