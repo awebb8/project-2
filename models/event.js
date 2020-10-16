@@ -20,6 +20,30 @@ module.exports = function (sequelize, DataTypes) {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
+		guestCount: {
+			type: DataTypes.INT,
+			allowNull: false,
+		},
+		address: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+		city: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+		state: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+		zipCode: {
+			type: DataTypes.INT,
+			allowNull: false,
+		},
+		description: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
 	});
 
 	Event.associate = function (models) {

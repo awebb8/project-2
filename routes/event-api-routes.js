@@ -38,6 +38,7 @@ module.exports = function (app) {
 			city: req.body.city,
 			state: req.body.state,
 			zipCode: req.body.state,
+			description: req.body.description,
 		})
 			.then(function (dbEvent) {
 				res.json(dbEvent);
