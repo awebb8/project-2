@@ -31,6 +31,7 @@ app.set("view engine", "handlebars");
 require("./routes/html-routes.js")(app);
 require("./routes/customer-api-routes.js")(app);
 require("./routes/vendor-api-routes.js")(app);
+require("./routes/event-api-routes.js")(app);
 // app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
