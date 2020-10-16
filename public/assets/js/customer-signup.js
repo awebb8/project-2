@@ -25,7 +25,6 @@ $(document).ready(function () {
 		emailInput.val("");
 		//   passwordInput.val("");
 	});
-
 	// Does a post to the signup route. If successful, we are redirected to the members page
 	// Otherwise we log any errors
 	function signUpCustomer(first_Name, last_Name, email) {
@@ -41,7 +40,6 @@ $(document).ready(function () {
 			})
 			.catch(handleLoginErr);
 	}
-
 	function handleLoginErr(err) {
 		$("#alert .msg").text(err.responseJSON);
 		$("#alert").fadeIn(500);
