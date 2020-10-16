@@ -32,16 +32,19 @@ $("#save-btn").on("click", function (event) {
   };
   console.log(newEvent);
   // send an AJAX POST-request with jQuery
-  $.post("/api/customers", newEvent)
+  $.post("/api/customer-create-event", newEvent)
     // on success, run this callback
     .then(function (data) {
       // log the data we found
       console.log(data);
+      window.location.replace("/services");
+
     });
-    
+  
   // empty each input box by replacing the value with an empty string
   $("#name").val("");
   $("#role").val("");
   $("#age").val("");
   $("#force-points").val("");
 })
+
