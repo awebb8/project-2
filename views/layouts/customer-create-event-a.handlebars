@@ -1,0 +1,165 @@
+{{!-- NavBar --}}
+<div class="top-bar" id="example-menu">
+  <div class="top-bar-left">
+    <ul class="dropdown menu">
+      <li class="menu-text site-title-font" id="navbar-title">Cultural Bash</li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><a href="#0">Create an Event</a></li>
+      <li><a href="#0">Profile</a></li>
+      <li><a href="#0"><button id="myBtn">Login</button></a></li>
+    </ul>
+  </div>
+</div>
+{{!-- BACKGROUND BOX where Event info and Service Cards will be displayed --}}
+<div class="grid-container create-event-box top-space">
+    <h2 class="event-create-title">STEP 1: Create Your Event!</h2>
+    <form>
+        <div class="grid-container">
+          <div class="grid-x grid-padding-x">
+            {{!-- INPUT FOR EVENT NAME with ID --}}
+            <div class="medium-6 cell">
+              <label>EVENT NAME
+                <input type="text" id="event-name" placeholder="Event Name">
+              </label>
+            </div>
+            {{!-- INPUT FOR EVENT TYPE with VALUES for each option --}}
+            <div class="medium-6 cell">
+              <label>SELECT EVENT TYPE
+                <select>
+                  <option value="" id="">Event Type</option>
+                  <option value="Wedding Ceremony" id="">Wedding Ceremony</option>
+                  <option value="Wedding Reception" id="">Wedding Reception</option>
+                  <option value="Sangeet" id="">Sangeet</option>
+                  <option value="Mehndi" id+"">Mehndi</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="grid-x grid-padding-x">
+            {{!-- INPUT FOR NUMBER OF GUESTS with ID --}}
+            <div class="medium-3 cell">
+              <label>
+                HOW MANY GUESTS?
+                <input type="number" id="guest-count" value="500">
+              </label>
+            </div>
+            {{!-- INPUT FOR EVENT DATE with ID --}}
+            <div class="medium-3 cell">
+              <label>EVENT DATE
+                <input type="date" id="event-date" placeholder="XX/XX/XXXX">
+              </label>
+            </div>
+            {{!-- INPUT FOR EVENT START TIME with ID --}}
+            <div class="medium-3 cell">
+              <label>START TIME
+                <input type="time" id="start-time" placeholder="00:00 AM">
+              </label>
+            </div>
+            {{!-- INPUT FOR END TIME with ID --}}
+            <div class="medium-3 cell">
+              <label>END TIME
+                <input type="time" id="end-time" placeholder="00:00 PM">
+              </label>
+            </div>
+          </div>
+          <div class="grid-x grid-padding-x">
+            {{!-- INPUT FOR EVENT LOCATION with ID --}}
+            <div class="medium-6 cell">
+              <label>ADDRESS
+                <input type="text" id="event-location" placeholder="Enter Your Address">
+              </label>
+            </div>
+            {{!-- INPUT SELECTION FOR EVENT CITY with id --}}
+            <div class="medium-3 cell">
+              <label>CITY
+                <input type="text" id="city-name"placeholder="City Name">
+              </label>
+            </div>
+            {{!-- INPUT SELECTION FOR EVENT STATE with value of each state option being the state name --}}
+            <div class="medium-1 cell">
+              <label>STATE
+                  <select>
+                    <option value="Alabama">AL</option>
+                    <option value="Alaska">AK</option>
+                    <option value="Arizona">AZ</option>
+                    <option value="Arkansas">AR</option>
+                    <option value="California">CA</option>
+                    <option value="Colorado">CO</option>
+                    <option value="Connecticut">CT</option>
+                    <option value="Delaware">DE</option>
+                    <option value="Florida">FL</option>
+                    <option value="Georgia">GA</option>
+                    <option value="Hawaii">HI</option>
+                    <option value="Idaho">ID</option>
+                    <option value="Illinois">IL</option>
+                    <option value="Indiana">IN</option>
+                    <option value="Iowa">IA</option>
+                    <option value="Kansas">KS</option>
+                    <option value="Kentucky">KY</option>
+                    <option value="Louisiana">LA</option>
+                    <option value="Maine">ME</option>
+                    <option value="Maryland">MD</option>
+                    <option value="Massachusetts">MA</option>
+                    <option value="Michigan">MI</option>
+                    <option value="Minnesota">MN</option>
+                    <option value="Mississippi">MS</option>
+                    <option value="Missouri">MO</option>
+                    <option value="Montana">MT</option>
+                    <option value="Nebraska">NE</option>
+                    <option value="Nevada">NV</option>
+                    <option value="NewHampshire">NH</option>
+                    <option value="NewJersey">NJ</option>
+                    <option value="NewMexico">NM</option>
+                    <option value="NewYork">NY</option>
+                    <option value="NorthCarolina">NC</option>
+                    <option value="NorthDakota">ND</option>
+                    <option value="Ohio">OH</option>
+                    <option value="Oklahoma">OK</option>
+                    <option value="Oregon">OR</option>
+                    <option value="Pennsylvania">PA</option>
+                    <option value="RhodeIsland">RI</option>
+                    <option value="SouthCarolina">SC</option>
+                    <option value="Tennessee">TN</option>
+                    <option value="Texas">TX</option>
+                    <option value="Utah">UT</option>
+                    <option value="Vermont">VT</option>
+                    <option value="Virginia">VA</option>
+                    <option value="Washington">WA</option>
+                    <option value="WestVirginia">WV</option>
+                    <option value="Wisconsin">WI</option>
+                    <option value="Wyoming">WY</option>
+                  </select>
+              </label>
+            </div>
+            {{!-- INPUT FOR EVENT ZIPCODE with id --}}
+            <div class="medium-2 cell">
+                <label>ZIPCODE
+                  <input type="text" id="event-zipcode" placeholder="XXXXX">
+                </label>
+            </div>
+          </div>
+          <div class="grid-x grid-padding-x">
+            {{!-- INPUT FOR optional description with auto expanding textarea --}}
+            <div class="medium-12 cell">
+                <label>ADD DESCRIPTION (optional)
+                  <textarea>Add Description...</textarea>
+                </label>
+            </div>
+          </div>
+        </div>
+    </form>
+    <div class="grid-x grid-padding-x align-center top-space">
+      <div class="cell small-5 text-center">
+        {{!-- Submit button with id --}}
+        <a class="button yellow-button" id="create-event-one" type="submit">NEXT</a>
+        </div>
+    </div>  
+</div>
+
+{{!-- FOOTER possibly add copywrite like project 1, for now there is an h3 placeholder  --}}
+<div class="cell shrink footer">
+    <h3>copywrite</h3>
+  </div>
