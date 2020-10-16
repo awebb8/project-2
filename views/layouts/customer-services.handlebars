@@ -48,38 +48,18 @@
             <div class="card-user-container text-center" id="upcoming-events">
                 <h3> My Upcoming Events</h3>
                 <table>
+                    {{#each newEvent}}
                     <tr>
-                        <th>Event ID</th>
-                        <th>Event Name</th>
-                        <th>Event Date</th>
-                        <th>Event Time</th>
-                        <th>Event Location</th>
-                        <th>Vendor Bids</th>
+                        <th>{{eventName}}</th>
+                        <th>{{eventDate}}</th>
+                        <th>{{startTime}}</th>
+                        <th>{{endTime}}</th>
+                        <th>{{address}}</th>
+                        <th>{{city}}</th>
+                        <th>{{state}}</th>
+                        <th>{{zipcode}}</th>
                     </tr>
-                    <tr>
-                        <td>Sample ID</td>
-                        <td>Random Name</td>
-                        <td>Random Date</td>
-                        <td>Random Time</td>
-                        <td>Random Location</td>
-                        <td>Random Bids</td>
-                    </tr>
-                    <tr>
-                        <td>Sample ID</td>
-                        <td>Random Name</td>
-                        <td>Random Date</td>
-                        <td>Random Time</td>
-                        <td>Random Location</td>
-                        <td>Random Bids</td>
-                    </tr>
-                    <tr>
-                        <td>Sample ID</td>
-                        <td>Random Name</td>
-                        <td>Random Date</td>
-                        <td>Random Time</td>
-                        <td>Random Location</td>
-                        <td>Random Bids</td>
-                    </tr>
+                    {{/each}}
                 </table>
                 <button class="button expand" id="create-event-button">Create an Event</button>
             </div>

@@ -11,3 +11,4 @@ createEventBtn.on("click", function (event) {
     upcomingEventsContainer.addClass("hide");
     createEventsContainer.removeClass("hide");
 })
+
