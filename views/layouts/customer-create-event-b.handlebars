@@ -1,0 +1,81 @@
+<div class="grid-container create-event-box top-space">
+    <h2 class="event-create-title">STEP 1: Add Desired Services!</h2>
+    <form>
+        <div class="grid-container">
+          <div class="grid-x grid-padding-x align-center">
+            <div class="medium-6 cell">
+                {{!-- SELECT SERVICES form with id and with values of each service name,
+                 possibly want thtese dynamically populated from database--}}
+                <select id="selectServices">
+                    <option value="">Select Service</option>
+                    <option value="bar-services">Bar Services</option>
+                    <option value="baraat">Baraat</option>
+                    <option value="bollywood-performers-and-instructors">Bollywood Performers &amp; Instructors</option>
+                    <option value="bridal-fashions">Bridal Fashions</option>
+                    <option value="bridal-jewelry">Bridal Jewelry</option>
+                    <option value="cakes-and-treats">Cakes &amp; Treats</option>
+                    <option value="catering">Catering</option>
+                    <option value="cinematography">Cinematography</option>
+                    <option value="dj">DJ</option>
+                    <option value="draping-styling">Draping/Styling</option>
+                    <option value="event-designer">Event Designer</option>
+                    <option value="event-insurance">Event Insurance</option>
+                    <option value="favors">Favors</option>
+                    <option value="floral-and-decor">Floral &amp; Decor</option>
+                    <option value="hair-and-makeup">Hair &amp; Makeup</option>
+                    <option value="honeymoon">Honeymoon</option>
+                    <option value="invitations-and-wedding-stationery">Invitations &amp; Wedding Stationery</option>
+                    <option value="lighting">Lighting</option>
+                    <option value="live-music">Live Music</option>
+                    <option value="mehndi-artists">Mehndi Artists</option>
+                    <option value="men-s-formalwear-and-tuxedos">Men's Formalwear &amp; Tuxedos</option>
+                    <option value="photography">Photography</option>
+                    <option value="planning-and-design" selected="selected">Planning &amp; Design</option>
+                    <option value="registry">Registry</option>
+                    <option value="rentals">Rentals</option>
+                    <option value="transportation">Transportation</option>
+                    <option value="travel-concierge">Travel Concierge</option>
+                    <option value="venues">Venues</option>
+                </select>
+            </div>
+            <div class= "medium-2 cell">
+              <input type="submit" id="select-catagory-button" class="button yellow-button" value="Add Service">
+            </div>
+          </div>
+        </div>
+    </form>
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x align-center">
+        <div class="medium-12 cell chosen-service-title">
+          <h5>Chosen Services:</h5>
+        </div>
+        {{!-- STILL NEED THESE TO BE DYNAMICALLY POPULATED TO THE PAGE ON CLICK OF SUBMIT BUTTON  --}}
+        {{!-- STILL NEED DELETE BUTTONS TO THE RIGHT OF EACH LIST ITEM  --}}
+        <div class="medium-5 cell" id="chosen-service">
+        <ul>
+          <li class="chosen-service">
+            <h6>You Chose This Service</h6>
+          </li>
+          <li class="chosen-service">
+            <h6>You Chose This Service</h6>
+          </li>
+          <li class="chosen-service">
+            <h6>You Chose This Service</h6>
+          </li>
+        </ul>
+        </div>
+        
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center top-space">
+      <div class="cell small-5 text-center">
+        <a class="button yellow-button" type="submit">CREATE EVENT</a>
+        </div>
+    </div>  
+</div>
+    
+{{!-- FOOTER possibly add copywrite like project 1, for now there is an h3 placeholder  --}}
+<div class="cell shrink footer">
+    <h3>copywrite</h3>
+</div>
+
