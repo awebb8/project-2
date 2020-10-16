@@ -1,4 +1,14 @@
 {{!-- NavBar --}}
+
+<head>
+  <title>Cultural Bash Authentication</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+   <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+
 <div class="top-bar" id="example-menu">
   <div class="top-bar-left">
     <ul class="dropdown menu">
@@ -7,9 +17,9 @@
   </div>
   <div class="top-bar-right">
     <ul class="menu">
-      <li><a href="#0">Create an Event</a></li>
-      <li><a href="#0">Profile</a></li>
-      <li><a href="#0"><button id="myBtn">Login</button></a></li>
+      <li><a href="/create-event-a">Create an Event</a></li>
+      <li><a href="/customer">Profile</a></li>
+      <li><a href="/customer-login"><button id="myBtn">Login</button></a></li>
     </ul>
   </div>
 </div>
@@ -22,18 +32,18 @@
             {{!-- INPUT FOR EVENT NAME with ID --}}
             <div class="medium-6 cell">
               <label>EVENT NAME
-                <input type="text" id="event-name" placeholder="Event Name">
+                <input type="text" id="eventName" placeholder="Event Name">
               </label>
             </div>
             {{!-- INPUT FOR EVENT TYPE with VALUES for each option --}}
             <div class="medium-6 cell">
               <label>SELECT EVENT TYPE
-                <select>
+                <select id="eventType">
                   <option value="" id="">Event Type</option>
                   <option value="Wedding Ceremony" id="">Wedding Ceremony</option>
                   <option value="Wedding Reception" id="">Wedding Reception</option>
                   <option value="Sangeet" id="">Sangeet</option>
-                  <option value="Mehndi" id+"">Mehndi</option>
+                  <option value="Mehndi" id="">Mehndi</option>
                 </select>
               </label>
             </div>
@@ -43,25 +53,25 @@
             <div class="medium-3 cell">
               <label>
                 HOW MANY GUESTS?
-                <input type="number" id="guest-count" value="500">
+                <input type="number" id="guestCount" value="500">
               </label>
             </div>
             {{!-- INPUT FOR EVENT DATE with ID --}}
             <div class="medium-3 cell">
               <label>EVENT DATE
-                <input type="date" id="event-date" placeholder="XX/XX/XXXX">
+                <input type="date" id="eventDate" placeholder="XX/XX/XXXX">
               </label>
             </div>
             {{!-- INPUT FOR EVENT START TIME with ID --}}
             <div class="medium-3 cell">
               <label>START TIME
-                <input type="time" id="start-time" placeholder="00:00 AM">
+                <input type="time" id="startTime" placeholder="00:00 AM">
               </label>
             </div>
             {{!-- INPUT FOR END TIME with ID --}}
             <div class="medium-3 cell">
               <label>END TIME
-                <input type="time" id="end-time" placeholder="00:00 PM">
+                <input type="time" id="endTime" placeholder="00:00 PM">
               </label>
             </div>
           </div>
@@ -69,19 +79,19 @@
             {{!-- INPUT FOR EVENT LOCATION with ID --}}
             <div class="medium-6 cell">
               <label>ADDRESS
-                <input type="text" id="event-location" placeholder="Enter Your Address">
+                <input type="text" id="address" placeholder="Enter Your Address">
               </label>
             </div>
             {{!-- INPUT SELECTION FOR EVENT CITY with id --}}
             <div class="medium-3 cell">
               <label>CITY
-                <input type="text" id="city-name"placeholder="City Name">
+                <input type="text" id="city"placeholder="City Name">
               </label>
             </div>
             {{!-- INPUT SELECTION FOR EVENT STATE with value of each state option being the state name --}}
             <div class="medium-1 cell">
               <label>STATE
-                  <select>
+                  <select id="state">
                     <option value="Alabama">AL</option>
                     <option value="Alaska">AK</option>
                     <option value="Arizona">AZ</option>
@@ -137,7 +147,7 @@
             {{!-- INPUT FOR EVENT ZIPCODE with id --}}
             <div class="medium-2 cell">
                 <label>ZIPCODE
-                  <input type="text" id="event-zipcode" placeholder="XXXXX">
+                  <input type="text" id="zipcode" placeholder="XXXXX">
                 </label>
             </div>
           </div>
@@ -154,7 +164,7 @@
     <div class="grid-x grid-padding-x align-center top-space">
       <div class="cell small-5 text-center">
         {{!-- Submit button with id --}}
-        <a class="button yellow-button" id="create-event-one" type="submit">NEXT</a>
+        <a class="button yellow-button" id="save-btn" type="submit">NEXT</a>
         </div>
     </div>  
 </div>
@@ -163,3 +173,6 @@
 <div class="cell shrink footer">
     <h3>copywrite</h3>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/customer-create-event-a.js"></script>

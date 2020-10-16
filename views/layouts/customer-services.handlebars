@@ -10,13 +10,20 @@
 </head>
 
 <body>
-    <div class="top-bar">
-        <div class="top-bar-left">
-            <ul class="dropdown menu" data-dropdown-menu>
-                <li class="menu-text">Cultural Bash</li>
-            </ul>
-        </div>
-    </div>
+<div class="top-bar" id="example-menu">
+  <div class="top-bar-left">
+    <ul class="dropdown menu">
+      <li class="menu-text site-title-font" id="navbar-title">Cultural Bash</li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><a href="/create-event-a">Create an Event</a></li>
+      <li><a href="/customer">Profile</a></li>
+      <li><a href="/customer-login"><button id="myBtn">Login</button></a></li>
+    </ul>
+  </div>
+</div>
 
 
     <div class="holy-grail-grid">
@@ -48,38 +55,18 @@
             <div class="card-user-container text-center" id="upcoming-events">
                 <h3> My Upcoming Events</h3>
                 <table>
+                    {{#each newEvent}}
                     <tr>
-                        <th>Event ID</th>
-                        <th>Event Name</th>
-                        <th>Event Date</th>
-                        <th>Event Time</th>
-                        <th>Event Location</th>
-                        <th>Vendor Bids</th>
+                        <th>{{eventName}}</th>
+                        <th>{{eventDate}}</th>
+                        <th>{{startTime}}</th>
+                        <th>{{endTime}}</th>
+                        <th>{{address}}</th>
+                        <th>{{city}}</th>
+                        <th>{{state}}</th>
+                        <th>{{zipcode}}</th>
                     </tr>
-                    <tr>
-                        <td>Sample ID</td>
-                        <td>Random Name</td>
-                        <td>Random Date</td>
-                        <td>Random Time</td>
-                        <td>Random Location</td>
-                        <td>Random Bids</td>
-                    </tr>
-                    <tr>
-                        <td>Sample ID</td>
-                        <td>Random Name</td>
-                        <td>Random Date</td>
-                        <td>Random Time</td>
-                        <td>Random Location</td>
-                        <td>Random Bids</td>
-                    </tr>
-                    <tr>
-                        <td>Sample ID</td>
-                        <td>Random Name</td>
-                        <td>Random Date</td>
-                        <td>Random Time</td>
-                        <td>Random Location</td>
-                        <td>Random Bids</td>
-                    </tr>
+                    {{/each}}
                 </table>
                 <button class="button expand" id="create-event-button">Create an Event</button>
             </div>
