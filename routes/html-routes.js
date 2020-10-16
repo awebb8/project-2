@@ -34,4 +34,16 @@ module.exports = function (app) {
   app.get("/event", function (req, res) {
     res.render("../views/layouts/customer-event-page");
   });
+
+  app.get("/create-event-a", function (req, res) {
+    res.render("../views/layouts/customer-create-event-a");
+  });
+
+  app.get("/create-event-b", function (req, res) {
+    res.render("../views/layouts/customer-create-event-b");
+  });
+
+  app.get("/vendor-bid", function (req, res) {
+    res.render("../views/layouts/vendor-bid");
+  });
 };
