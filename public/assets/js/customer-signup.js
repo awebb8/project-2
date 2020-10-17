@@ -35,7 +35,7 @@ $(document).ready(function () {
 			// password: password
 		})
 			.then(function (data) {
-				window.location.replace("/customer");
+				window.location.replace("/customer-login");
 				// If there's an error, handle it by throwing up a Foundation alert
 			})
 			.catch(handleLoginErr);
