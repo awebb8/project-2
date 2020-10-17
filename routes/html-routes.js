@@ -42,4 +42,8 @@ module.exports = function (app) {
 	app.get("/vendor-bid", function (req, res) {
 		res.render("../views/layouts/vendor-bid");
 	});
+
+	app.get("/customer-profile", function (req, res) {
+		res.render("../views/layouts/customer-profile")
+	})
 };
