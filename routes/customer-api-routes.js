@@ -12,10 +12,6 @@ module.exports = function (app) {
 			res.json(dbCustomer);
 		});
 	});
-
-	app.get("/api/customers", function (req, res) {
-		res.json("hello")
-	}),
 	
 	app.get("/api/customers/:id", function (req, res) {
 		// Here we add an "include" property to our options in our findOne query
@@ -31,8 +27,11 @@ module.exports = function (app) {
 		});
 	});
 
-	app.post("/api/customer-login", passport.authenticate("local"), function (req, res) {
-		res.json(req.customer);
+	app.post("/api/login", function (req, res) {
+		console.log(req.session);
+		//req.session.userId = req.session.passport.user.dataValues.id;
+		console.log(req.session.userId)
+		res.redirect("/customer");
 	});
 
 	app.post("/api/customer-signup", function (req, res) {
@@ -42,7 +41,7 @@ module.exports = function (app) {
 			email: req.body.email,
 		})
 			.then(function () {
-				res.redirect(307, "/api/customer-login");
+				res.redirect(200, "/customer-login");
 			})
 			.catch(function (err) {
 				res.status(401).json(err);

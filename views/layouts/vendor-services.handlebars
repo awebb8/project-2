@@ -1,3 +1,117 @@
-Vendor page
+<div class="top-bar" id="example-menu">
+  <div class="top-bar-left">
+    <ul class="dropdown menu">
+      <li class="menu-text site-title-font" id="navbar-title">Cultural Bash</li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><a href="/vendor-bid">Bid on an Event</a></li>
+      <li><a href="/vendor">Profile</a></li>
+      <li><a href="/vendor-login"><button id="myBtn">Login</button></a></li>
+    </ul>
+  </div>
+</div>
+{{!-- BACKGROUND BOX where Event info and Service Cards will be displayed --}}
+<div class="grid-container event-box top-space">
+ <h2>Welcome <span class="vendor-name"></span></h2>
+  {{!-- HEADING --}}
+  <h3 class="title-underline">Pending Bids</h3>
+  {{!-- SERVICE CARD DISPLAY AREA --}}
+  <div class="grid-x grid-margin-x grid-x grid-margin-x small-up-4 medium-up-4 large-up-30">
+    {{!-- Service Card --}}
+    <div class="cell">
+      <div class="card service-card">
+        <div class="card-section">
+            {{!-- Dynamically Generate the Event Title --}}
+             <h5>Event Title</h5>
+            {{!-- Dynamically Generate the Event Date  --}}
+            <div class=" flex-child-auto"><h6>Date: 12/12/20 {{date}} </h6></div>
+            {{!-- Dynamically Generate the Event Time --}}
+            <div class=" flex-child-auto"><h6>Time: 1:30-2:30 {{startTime}} - {{endTime}} </h6></div>
+            {{!-- Dynamically Generate the Event Location/Address --}}
+            <div class=" flex-child-auto"><h6>Location: 275 West Vineland Road, Augusta, GA, 30904</h6></div>
+          {{!-- VIEW BIDS leads to Bid List Page --}}
+          <a class="button small pink-button" href="#">CANCEL BID</a>
+        </div>
+      </div>
+    </div>
+{{!-- Below this line are examples that will need to be deleted until the footer--}}
+    <div class="cell">
+      <div class="card service-card">
+        <div class="card-section">
+          <h5>Event Title</h5>
+          <p>BID AMOUNT: 500</p>
+    
+          <a class="button small pink-button" href="#">CANCEL BID</a>
+        </div>
+      </div>
+    </div>
 
-<h2>Welcome <span class="vendor-name"></span></h2>
+    <div class="cell">
+      <div class="card service-card">
+        <div class="card-section">
+          <h5>Event Title</h5>
+          <p>BID AMOUNT: 700</p>
+
+          <a class="button small pink-button" href="#">CANCEL BID</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{{!-- Accepted Bids --}}
+<div class="grid-container event-box top-space">
+  {{!-- HEADING --}}
+  <h3 class="title-underline">Accepted Bids</h3>
+  {{!-- SERVICE CARD DISPLAY AREA --}}
+  <div class="grid-x grid-margin-x grid-x grid-margin-x small-up-4 medium-up-4 large-up-30">
+    {{!-- Service Card --}}
+    <div class="cell">
+      <div class="card service-card">
+        <div class="card-section">
+            {{!-- Dynamically Generate the Event Title --}}
+             <h5>Event Title {{eventName}} </h5>
+            {{!-- Dynamically Generate the Event Date  --}}
+            <div class=" flex-child-auto"><h6>Date: 12/12/20 {{eventDate}} </h6></div>
+            {{!-- Dynamically Generate the Event Time --}}
+            <div class=" flex-child-auto"><h6>Time: 1:30-2:30 {{startTime}} - {{endTime}} </h6></div>
+            {{!-- Dynamically Generate the Event Location/Address --}}
+            <div class=" flex-child-auto"><h6>Location: 275 West Vineland Road, Augusta, GA, 30904 {{address}} {{city}} {{state}} {{zipCode}}</h6></div>
+          {{!-- VIEW BIDS leads to Bid List Page --}}
+          <a class="button small pink-button" href="#">ARCHIVE</a>
+        </div>
+      </div>
+    </div>
+{{!-- Below this line are examples that will need to be deleted until the footer--}}
+    <div class="cell">
+      <div class="card service-card">
+        <div class="card-section">
+          <h5>Event Title</h5>
+          <p>BID AMOUNT: 500</p>
+    
+          <a class="button small pink-button" href="#">ARCHIVE</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cell">
+      <div class="card service-card">
+        <div class="card-section">
+          <h5>Event Title</h5>
+          <p>BID AMOUNT: 700</p>
+
+          <a class="button small pink-button" href="#">ARCHIVE</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{{!-- FOOTER possibly add copywrite like project 1, for now there is an h3 placeholder  --}}
+<div class="cell shrink footer">
+    <h3>copywrite</h3>
+</div>

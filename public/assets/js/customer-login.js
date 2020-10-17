@@ -17,6 +17,7 @@ $(document).ready(function() {
     }
   
       // If we have an email and password we run the loginUser function and clear the form
+
       console.log("loginCustomer function was told to run");
       loginCustomer(userData.email);
       emailInput.val("");
@@ -24,16 +25,17 @@ $(document).ready(function() {
 
     // loginUser does a post to our "api/login" route and if successful, redirects us the the vendor page
     function loginCustomer(email) {
-        $.post("/api/customer-login", {
-        email: email
+        console.log(email)
+        $.ajax({
+            type: "POST",
+            url: "/api/login",
+            data: JSON.stringify(email)
         })
-        .then(function() {
+        .then(function(data) {
+            console.log(data);
             window.location.replace("/customer");
             // If there's an error, log the error
         })
-        .catch(function(err) {
-            console.log(err);
-            console.log("POST unsuccessful");
-        });
+        
     }
 })
