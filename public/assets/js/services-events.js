@@ -21,15 +21,22 @@ $(document).ready(function () {
         console.log(newService);
     })
     
-    $("#createServices").on("click", function (event, newService) {
+    $("#createServices").on("click", function (event) {
         event.preventDefault();
-        console.log("you clicked submit");
-        createNewServices(newService);
-    });
-    function createNewServices(newServiceItem) {
-        $.post("/api/services", newService).then(function () {
-            console.log(newService)
+        for (i = 0; i < newService.length; i++) {
+            var createdService = {
+                serviceName: newService[i]
+            }
+            createNewServices(createdService.serviceName);
 
+        }
+        console.log("you clicked submit");
+    });
+    function createNewServices(serviceName) {        
+        $.post("/api/services", {
+            serviceName: serviceName
+        }).then(function () {
+            console.log(newService)
         });
     }
 });
