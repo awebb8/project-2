@@ -5,13 +5,13 @@ $(document).ready(function() {
 
     // When the form is submitted, we validate there's an email and password entered
     loginForm.on("submit", function(event) {
-        console.log("Login button clicked");
         event.preventDefault();
+        console.log("Login button clicked");
         var userData = {
         email: emailInput.val().trim(),
         // password: passwordInput.val().trim()
     };
-    if (!userData.email || !userData.password) {
+    if (!userData.email) {
         console.log("there are blank fields");
         return;
     }
@@ -33,7 +33,7 @@ $(document).ready(function() {
         })
         .catch(function(err) {
             console.log(err);
-            console.log("there is no /customer url");
+            console.log("POST unsuccessful");
         });
     }
 })
