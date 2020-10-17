@@ -38,8 +38,6 @@ app.get("/api/config", (req, res) => {
 require("./routes/customer-api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 require("./routes/vendor-api-routes.js")(app);
-require("./routes/customer-service-request.js")(app);
-require("./routes/event-api-routes.js")(app);
 
 db.sequelize
 	//.sync()
