@@ -15,15 +15,15 @@ $(document).ready(function () {
 		var newEvent = {
 			eventName: $("#eventName").val(),
 
-			eventType: $("#eventType").val(),
-
-			guestCount: $("#guestCount").val(),
-
 			eventDate: $("#eventDate").val(),
 
 			startTime: $("#startTime").val(),
 
 			endTime: $("#endTime").val(),
+
+			eventType: $("#eventType").val(),
+
+			guestCount: $("#guestCount").val(),
 
 			address: $("#address").val(),
 
@@ -35,11 +35,11 @@ $(document).ready(function () {
 		};
 		console.log(newEvent);
 
-		if (!newEvent.eventName || !newEvent.guestCount || !newEvent.eventDate || !newEvent.startTime || !newEvent.endTime || !newEvent.address || !newEvent.city || !newEvent.state || !newEvent.zipCode || !newEvent.description) {
-			return;
-		}
+		// if (!newEvent.eventName || !newEvent.guestCount || !newEvent.eventDate || !newEvent.startTime || !newEvent.endTime || !newEvent.address || !newEvent.city || !newEvent.state || !newEvent.zipCode || !newEvent.description) {
+		// 	return;
+		// }
 
-		createCustomerEvent(newEvent.eventName, newEvent.guestCount, newEvent.eventDate, newEvent.startTime, newEvent.endTime, newEvent.address, newEvent.city, newEvent.state, newEvent.zipCode, newEvent.description);
+		createCustomerEvent(newEvent.eventName, newEvent.eventDate, newEvent.startTime, newEvent.endTime, newEvent.eventType, newEvent.guestCount, newEvent.address, newEvent.city, newEvent.state, newEvent.zipCode, newEvent.description);
 		$("#eventName").val("");
 		$("#eventDate").val("");
 		$("#startTime").val("");
@@ -53,7 +53,7 @@ $(document).ready(function () {
 		$("#description").val("");
 	});
 	// send an AJAX POST-request with jQuery
-	function createCustomerEvent(eventName, eventDate, eventType, guestCount, startTime, endTime, address, city, state, zipCode, description) {
+	function createCustomerEvent(eventName, eventDate, startTime, endTime, eventType, guestCount,  address, city, state, zipCode, description) {
 		$.post("/api/customer-create-event", {
 			eventName: eventName,
 			eventDate: eventDate,
@@ -70,14 +70,15 @@ $(document).ready(function () {
 
 			// on success, run this callback
 			.then(function (data) {
-				window.location.replace("/customer-service-request");
+				console.log("you psoted")
+				window.location.replace("/services");
 				// log the data we found
 			})
-			.catch(handleLoginErr);
+	// 		.catch(handleLoginErr);
 	}
 
-	function handleLoginErr(err) {
-		$("#alert .msg").text(err.responseJSON);
-		$("#alert").fadeIn(500);
-	}
+	// function handleLoginErr(err) {
+	// 	$("#alert .msg").text(err.responseJSON);
+	// 	$("#alert").fadeIn(500);
+	// }
 });
