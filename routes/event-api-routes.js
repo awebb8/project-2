@@ -25,9 +25,6 @@ module.exports = function (app) {
 			res.json(dbEvent);
 		});
 	});
-	app.get("/api/customer-create", function (req, res) {
-		res.json("hello");
-	});
 	app.post("/api/customer-create-event", function (req, res) {
 		db.Event.create({
 			eventName: req.body.eventName,

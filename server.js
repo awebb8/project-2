@@ -35,13 +35,12 @@ app.get("/api/config", (req, res) => {
 
 
 // Import routes and give the server access to them.
-// var routes = require("./controllers/bidbash-controller.js");
 require("./routes/customer-api-routes.js")(app);
 require("./routes/html-routes.js")(app);
-//require("./routes/vendor-api-routes.js")(app);
-//require("./routes/services-api-routes")(app);
-// app.use(routes);
-// Start our server so that it can begin listening to client requests.
+require("./routes/vendor-api-routes.js")(app);
+require("./routes/customer-service-request.js")(app);
+require("./routes/event-api-routes.js")(app);
+
 db.sequelize
 	//.sync()
 	.sync({ force: true })

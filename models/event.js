@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-	const Event = sequelize.define("Event", {
+	const Events = sequelize.define("Event", {
 		eventName: {
 			type: DataTypes.STRING,
 			allowNull: false,
@@ -46,16 +46,16 @@ module.exports = function (sequelize, DataTypes) {
 		},
 	});
 
-	Event.associate = function (models) {
+	Events.associate = function (models) {
 		//Associating the Event with Customer. Event belongsTo to customer
-		Event.belongsTo(models.Customer);
+		Events.belongsTo(models.Customer);
 
 		// Associating Event with Services
 		// When an Event is deleted, also delete any associated Services
-		Event.hasMany(models.Service, {
+		Events.hasMany(models.Service, {
 			onDelete: "cascade",
 		});
 	};
 
-	return Event;
+	return Events;
 };

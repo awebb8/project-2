@@ -33,7 +33,7 @@ $(document).ready(function() {
         })
         .then(function(data) {
             console.log(data);
-            window.location.replace("/customer");
+            window.location.replace("/customer-create-event");
             // If there's an error, log the error
         })
         
