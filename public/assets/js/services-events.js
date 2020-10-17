@@ -24,11 +24,11 @@ $(document).ready(function () {
     $("#createServices").on("click", function (event, newService) {
         event.preventDefault();
         console.log("you clicked submit");
-        createNewServices(newServiceItem);
+        createNewServices(newService);
     });
     function createNewServices(newServiceItem) {
-        $.post("/api/services", newServiceItem).then(function () {
-            console.log(newServiceItem)
+        $.post("/api/services", newService).then(function () {
+            console.log(newService)
 
         });
     }

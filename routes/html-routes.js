@@ -40,7 +40,7 @@ module.exports = function (app) {
 	});
 
   app.get("/services", function (req, res) {
-    res.render("../views/layouts/services-events");
+    res.render("../views/layouts/customer-service-request");
   });
 
 	app.get("/vendor-bid", function (req, res) {

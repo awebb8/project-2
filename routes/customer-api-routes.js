@@ -41,8 +41,8 @@ module.exports = function (app) {
 			last_Name: req.body.last_Name,
 			email: req.body.email,
 		})
-			.then(function (dbCustomer) {
-				res.json(dbCustomer);
+			.then(function () {
+				res.redirect(307, "/api/customer-login");
 			})
 			.catch(function (err) {
 				res.status(401).json(err);
