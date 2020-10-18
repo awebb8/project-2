@@ -28,11 +28,19 @@ module.exports = function (app) {
 	});
 
 	app.get("/api/customer-profile", function (req, res) {
-		console.log("told to get")
 		db.Event.findAll(
 			{}
 			).then(Event => {
 				res.json(Event)
+		}).catch(err => console.log(err));
+	});
+
+
+	app.get("/api/customer-signup", function (req, res) {
+		db.Customer.findAll(
+			{}
+			).then(Customer => {
+				res.json(Customer)
 		}).catch(err => console.log(err));
 	});
 
@@ -64,13 +72,6 @@ module.exports = function (app) {
 		});
 	});
 
-	app.post("/api/login", function (req, res) {
-		console.log(req.session);
-		//req.session.userId = req.session.passport.user.dataValues.id;
-		console.log(req.session.userId)
-		res.redirect("/customer");
-	});
-
 	app.post("/api/customer-signup", function (req, res) {
 		db.Customer.create({
 			first_Name: req.body.first_Name,
@@ -85,17 +86,29 @@ module.exports = function (app) {
 			});
 	});
 
-	// Route for getting some data about our user to be used client side
-	app.get("/api/customer_data", function(req, res) {
-		if (!req.customer) {
+	app.post("/api/login", function (req, res) {
+		console.log(req.session);
+		//req.session.userId = req.session.passport.user.dataValues.id;
+		console.log(req.session.userId)
+		res.redirect("/customer");
+	});
+
+	// app.post("/api/login", passport.authenticate("local"), function(req,res) {
+	// 	console.log("user: " + req.user);
+	// 	res.json(req.user);
+	// 	// res.redirect("/customer-profile");
+	// })
+
+	// Route for getting some data about our Customer to be used client side
+	app.get("/api/user_data", function(req, res) {
+		if (!req.user) {
 		  // The user is not logged in, send back an empty object
 		  res.json({});
 		} else {
 		  // Otherwise send back the user's email and id
-		  // Sending back a password, even a hashed password, isn't a good idea
 		  res.json({
-			email: req.customer.email,
-			id: req.customer.id
+			email: req.user.email,
+			id: req.user.id
 		  });
 		}
 	});

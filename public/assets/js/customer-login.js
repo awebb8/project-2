@@ -8,7 +8,7 @@ $(document).ready(function() {
         event.preventDefault();
         console.log("Login button clicked");
         var userData = {
-        email: emailInput.val().trim(),
+        email: emailInput.val()
         // password: passwordInput.val().trim()
     };
     if (!userData.email) {
@@ -26,11 +26,14 @@ $(document).ready(function() {
     // loginUser does a post to our "api/login" route and if successful, redirects us the the vendor page
     function loginCustomer(email) {
         console.log(email)
-        $.ajax({
-            type: "POST",
-            url: "/api/login",
-            data: JSON.stringify(email)
+        $.post("/api/login", {
+            email: email
         })
+        // $.ajax({
+        //     type: "POST",
+        //     url: "/api/login",
+        //     data: JSON.stringify(email)
+        // })
         .then(function(data) {
             console.log(data);
             window.location.replace("/customer-profile");
