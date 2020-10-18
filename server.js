@@ -33,6 +33,12 @@ app.get("/api/config", (req, res) => {
 	});
 });
 
+app.get("/customer-profile"), (req,res) => {
+	db.Event.findall().then(Events => {
+		console.log(Events);
+		res.sendStatus(200);
+	})
+}
 
 // Import routes and give the server access to them.
 require("./routes/customer-api-routes.js")(app);

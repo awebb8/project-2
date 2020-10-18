@@ -35,9 +35,9 @@ $(document).ready(function () {
 		};
 		console.log(newEvent);
 
-		// if (!newEvent.eventName || !newEvent.guestCount || !newEvent.eventDate || !newEvent.startTime || !newEvent.endTime || !newEvent.address || !newEvent.city || !newEvent.state || !newEvent.zipCode || !newEvent.description) {
-		// 	return;
-		// }
+		if (!newEvent.eventName || !newEvent.guestCount || !newEvent.eventDate || !newEvent.startTime || !newEvent.endTime || !newEvent.address || !newEvent.city || !newEvent.state || !newEvent.zipCode || !newEvent.description) {
+			return;
+		}
 
 		createCustomerEvent(newEvent.eventName, newEvent.eventDate, newEvent.startTime, newEvent.endTime, newEvent.eventType, newEvent.guestCount, newEvent.address, newEvent.city, newEvent.state, newEvent.zipCode, newEvent.description);
 		$("#eventName").val("");
@@ -70,15 +70,14 @@ $(document).ready(function () {
 
 			// on success, run this callback
 			.then(function (data) {
-				console.log("you psoted")
 				window.location.replace("/services");
 				// log the data we found
 			})
-	// 		.catch(handleLoginErr);
+			.catch(handleLoginErr);
 	}
 
-	// function handleLoginErr(err) {
-	// 	$("#alert .msg").text(err.responseJSON);
-	// 	$("#alert").fadeIn(500);
-	// }
+	function handleLoginErr(err) {
+		$("#alert .msg").text(err.responseJSON);
+		$("#alert").fadeIn(500);
+	}
 });

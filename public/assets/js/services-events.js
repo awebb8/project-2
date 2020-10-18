@@ -36,6 +36,8 @@ $(document).ready(function () {
         $.post("/api/services", {
             serviceName: serviceName
         }).then(function () {
+            window.location.replace("/customer-profile");
+            // log the data we found
             console.log(newService)
         });
     }
