@@ -1,4 +1,8 @@
+
+let event = [{eventName: "underwaterBasketesrsfas"}]
 module.exports = function (app) {
+
+
 	app.get("/main", function (req, res) {
 		res.render("../views/layouts/main");
 	});
@@ -44,6 +48,6 @@ module.exports = function (app) {
 	});
 
 	app.get("/customer-profile", function (req, res) {
-		res.render("../views/layouts/customer-profile")
+		res.render("../views/customer-profile", {eventName: "Underwater basket weaving"})
 	})
 };
