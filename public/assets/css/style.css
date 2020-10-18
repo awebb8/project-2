@@ -60,14 +60,23 @@ body{
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.534); /* Black w/ opacity */
 }
+a{
+  color: #D60042;
+}
+a:hover {
+  color: white;
+}
+.login-title {
+  font-family: 'Cookie', cursive;
+}
 /* Modal Content/Box */
 .modal-content {
   background-color: #FDC366;
   margin: 12% auto;  /* 15% from the top and centered */
   max-width: 500px;
   max-height: 500px;
+  border-radius: 25px;
   padding: 20px;
-  border: solid 5px black;
   width: 80%; /* Could be more or less, depending on screen size */
 }
 /* The Close Button */
