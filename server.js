@@ -40,7 +40,6 @@ app.get("/customer-profile"), (req,res) => {
 		res.sendStatus(200);
 	})
 }
-
 // Import routes and give the server access to them.
 require("./routes/customer-api-routes.js")(app);
 require("./routes/html-routes.js")(app);

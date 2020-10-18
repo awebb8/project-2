@@ -2,7 +2,6 @@
 //     console.log(Event);
 //     console.log(Event[0].address)
 
-
 // })
 $(document).ready(function() {
     let getAllEvents = () =>{
@@ -28,12 +27,34 @@ $(document).ready(function() {
             <td>${parameter[i].eventType}</td>
             <td>${parameter[i].guestCount}</td>
             <td>${parameter[i].city},${parameter[i].state},${parameter[i].zipCode}</td>
+            <td>
+            <button class ="alert button" id ="${parameter[i].id}"> Delete Event </button></td>
             </tr>`)
 
             $(".holy-grail-left").append(`
             <h4> Event Description:</h4><p>${eventDescription}</p>`)
-        
+
+            $(".alert").on("click", handleEventDelete);
+
+            function handleEventDelete() {
+                var selectedEvent= $(this).attr("id")
+                console.log(selectedEvent)
+              deletePost(selectedEvent);
+            }
+
+            function deletePost(id) {
+                $.ajax({
+                  method: "DELETE",
+                  url: "/api/customer-profile/" + id
+                })
+                  .then(function() {
+                    console.log("success")
+                  });
+              }
         }
+
+
+
     } 
     getAllEvents();
 
