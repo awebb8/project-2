@@ -27,6 +27,15 @@ module.exports = function (app) {
 		});
 	});
 
+	app.get("/api/customer-profile", function (req, res) {
+		console.log("told to get")
+		db.Event.findAll(
+			{}
+			).then(Event => {
+				res.json(Event)
+		}).catch(err => console.log(err));
+	});
+
 	// Customer's events
 	app.get("/api/event", function (req, res) {
 		// Here we add an "include" property to our options in our findAll query
@@ -50,6 +59,7 @@ module.exports = function (app) {
 			},
 			include: [db.service],
 		}).then(function (dbEvent) {
+
 			res.json(dbEvent);
 		});
 	});
@@ -99,12 +109,12 @@ module.exports = function (app) {
 		});
 	});
 
-	app.get("/api/customer-create-event", function(req, res) {
-		db.Event.findAll({})
-		  .then(function(Event) {
-			res.json(Event);
-		  });
-	  });
+	// app.get("/api/customer-create-event", function(req, res) {
+	// 	db.Event.findAll({})
+	// 	  .then(function(Event) {
+	// 		res.json(Event);
+	// 	  });
+	//   });
 
 	app.post("/api/customer-create-event", function (req, res) {
 		db.Event.create({
