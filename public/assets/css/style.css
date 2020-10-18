@@ -253,3 +253,19 @@ li {
   margin-top: -20px;
   margin-bottom: 30px;
 }
+
+/* .past-event {
+  background: black;
+  color: white;
+  border-radius: 25px;
+  margin-left: 25px;
+} */
+
+.profile-bar {
+  font-family: 'Cookie', cursive;
+}
+
+.profile-events {
+  font-family: 'Cookie', cursive;
+  border-bottom: solid 1px  #D60042;
+}
