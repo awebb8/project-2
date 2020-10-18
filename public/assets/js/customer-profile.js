@@ -49,6 +49,7 @@ $(document).ready(function() {
                 })
                   .then(function() {
                     console.log("success")
+                    location.reload();
                   });
               }
         }
