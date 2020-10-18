@@ -1,28 +1,80 @@
+/* BACKGROUND IMAGE */
+body{
+  background-image: url("https://freedesignfile.com/upload/2015/05/Paper-floral-white-seamless-pattern-vector.jpg"); 
+
+}
+/* Font for site title in nav bar and homepage */
+.site-title-font {
+  font-family: 'Cookie', cursive;
+  font-size: 50pt;
+  font-weight: normal;
+}
+/* NAVBAR BACKGROUND COLOR */
+.top-bar,
+.top-bar ul,
+.top-bar li,
+.top-bar a,
+.top-bar button {
+  background-color:black;
+  color: white;
+  overflow: hidden;
+}
+/* NAVBAR TITLE FONTSIZE */
+#navbar-title {
+  font-size: 20pt;
+  font-weight: normal;
+}
+.footer {
+  background-color: black;
+  width: 100%;
+  height: auto;
+}
+
 .form-registration {
-    background: #fefefe;
+    background: #FDC366;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 80px;
   }
-  
+
+  figcaption {
+    font-size: 20pt;
+    font-family: 'Cookie', cursive;
+  }
   .form-registration .form-registration-img {
     position: relative;
+    border-radius: 25px;
   }
 
-  img {
-    margin-top: 10px;
-  }
+img {
+  border-radius: 25px;
+  object-fit: cover;
+  height: 270px;
+  width: 100%;
+}
 
-  .center {
+a {
+  color: #D60042;
+}
+  /* .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
+  } */
   
   .form-registration .form-registration-img .form-registration-img-caption {
     position: absolute;
     padding: 0.5rem;
     text-align: center;
+    align-self: center;
     width: 100%;
     bottom: 0;
     background: -webkit-gradient(linear, left bottom, left top, color-stop(1, rgba(254, 254, 254, 0.3)), color-stop(0, #fefefe));
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
   }
   
   .form-registration-group {
@@ -34,15 +86,13 @@
   }
   
   .form-registration-group .form-registration-input:focus {
-    border: 2px solid #1779ba;
-    box-shadow: 0 0 5px #1779ba;
+    border: 2px solid #D60042;
+    box-shadow: 0 0 5px #D60042;
   }
   
   .form-registration-group .form-registration-submit-button {
     text-transform: uppercase;
-    margin-bottom: 0;
     display: inline-block;
-    vertical-align: middle;
     margin: 0 0 1rem 0;
     padding: 0.85em 1em;
     -webkit-appearance: none;
@@ -53,8 +103,8 @@
     line-height: 1;
     text-align: center;
     cursor: pointer;
-    background-color: #1779ba;
-    color: #fefefe;
+    background-color: #D60042;
+    color: black;
     display: block;
     width: 100%;
     margin-right: 0;
@@ -67,15 +117,16 @@
   }
   
   .form-registration-group .form-registration-submit-button:hover, .form-registration-group .form-registration-submit-button:focus {
-    background-color: #126195;
-    color: #fefefe;
+    background-color: #FDC366;
+    color: #D60042;
+    border: solid 2px #D60042;
+    border-radius: 25px;
   }
   
   .form-registration-group .form-registration-social-button {
     text-transform: uppercase;
     font-size: 16px;
     display: inline-block;
-    vertical-align: middle;
     margin: 0 0 1rem 0;
     padding: 0.85em 1em;
     -webkit-appearance: none;
@@ -86,8 +137,8 @@
     line-height: 1;
     text-align: center;
     cursor: pointer;
-    border: 1px solid #3b5998;
-    color: #3b5998;
+    border: 1px solid #D60042;
+    color: #D60042;
     display: block;
     width: 100%;
     margin-right: 0;
@@ -116,6 +167,7 @@
   .form-registration-group .form-registration-member-signin {
     text-align: center;
     font-weight: bold;
+    color: white;
     font-size: 14px;
   }
   

@@ -9,19 +9,24 @@
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
   <link href="/assets/css/signup.css" rel="stylesheet">
 </head>
-
-<body>
-  <div class="top-bar">
-    <div class="top-bar-left">
-      <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-text">Cultural Bash</li>
-      </ul>
-    </div>
+{{!-- NAVBAR --}}
+<div class="top-bar" id="example-menu">
+  <div class="top-bar-left">
+    <ul class="dropdown menu">
+      <li class="menu-text site-title-font" id="navbar-title">The Wedding Pot</li>
+    </ul>
   </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><a href="/vendor-login">Vendor Login</a></li>
+      <li><a href="/customer-login">Customer Login</a></li>
+    </ul>
+  </div>
+</div>
 
   <div class="grid-container">
     <div class="grid-x grid-margin-x">
-      <div class="cell small-6 small-offset-3">
+      <div class="cell small-6 small-offset-3 ">
 
         <div class="form-registration">
 
@@ -29,9 +34,9 @@
             <div class="verticalhorizontal">
               <img
                 src="https://www.phillymag.com/wp-content/uploads/sites/3/2019/11/indian-wedding-ceremony-thumb-2.jpg"
-                alt="wedding-image" style="height:350px;" class="center" />
+                alt="wedding-image"/>
             </div>
-            <figcaption class="form-registration-img-caption">Experience everything Cultural Bash has to offer.
+            <figcaption class="form-registration-img-caption">Experience everything The Wedding Pot has to offer.
             </figcaption>
           </figure>
 
