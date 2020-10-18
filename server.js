@@ -14,9 +14,10 @@ const PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+app.use(express.static("public"));
+
 // We need to use sessions to keep track of our user's login status
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
-app.use(express.static("public"));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -34,7 +35,7 @@ app.get("/api/config", (req, res) => {
 });
 
 app.get("/customer-profile"), (req,res) => {
-	db.Event.findall().then(Events => {
+	db.Event.findAll().then(Events => {
 		console.log(Events);
 		res.sendStatus(200);
 	})

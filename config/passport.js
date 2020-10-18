@@ -9,7 +9,7 @@ passport.use(new LocalStrategy(
   {
     usernameField: "email"
   },
-  function(email, password, done) {
+  function(email, done) {
     // When a user tries to sign in this code runs
     db.Customer.findOne({
       where: {
