@@ -86,18 +86,42 @@ module.exports = function (app) {
 			});
 	});
 
-	app.post("/api/login", function (req, res) {
-		console.log(req.session);
-		//req.session.userId = req.session.passport.user.dataValues.id;
-		console.log(req.session.userId)
-		res.redirect("/customer");
-	});
+	// app.post("/api/login", function (req, res) {
+	// 	console.log("made post");
+	// 	console.log(req.session);
+	// 	//req.session.userId = req.session.passport.user.dataValues.id;
+	// 	console.log(req.session.userId)
+	// 	res.redirect("/customer");
+	// });
 
 	// app.post("/api/login", passport.authenticate("local"), function(req,res) {
+	// 	console.log("told to post");
 	// 	console.log("user: " + req.user);
+	// 	console.log("user_id:" + user.id);
 	// 	res.json(req.user);
 	// 	// res.redirect("/customer-profile");
 	// })
+
+	  // get user by email
+	  app.get("/api/user/:email", function (req, res) {
+		console.log(req.params.email);
+		db.Customer.findAll({
+		  where: {
+			email: req.params.email,
+		  },
+		})
+		  .then((user) => {
+			res.json(user);
+		  })
+		  .catch((err) => {
+			console.log(err);
+			res.status(500).json({
+			  error: true,
+			  data: null,
+			  message: "Unable to get user by email.",
+			});
+		  });
+	  });
 
 	// Route for getting some data about our Customer to be used client side
 	app.get("/api/user_data", function(req, res) {
