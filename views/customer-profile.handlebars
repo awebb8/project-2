@@ -26,31 +26,32 @@
 </div>
     
 
-
     <div class="holy-grail-grid">
         <div class="holy-grail-header">
             <h3>Profile Page</h3>
         </div>
 
         <div class="holy-grail-left">
-            <h3>Past Events</h3>
+            <div class="current-events">
+            <h3> Upcoming Event Details:</h3>
+            {{!-- <h3>Past Events</h3>
             <ul>
                 <li><a href="#">Event 1 ID/Name Here</a></li>
                 <li><a href="#">Event 2 ID/Name Here</a></li>
                 <li><a href="#">Event 3 ID/Name Here</a></li>
-            </ul>
+            </ul> --}}
+
+            </div>
+            <div class ="event-description">
+            </div>
         </div>
 
         <div class="holy-grail-middle">
             <div class="card-user-container">
                 <div class="card-user-avatar">
-                    <img src="https://placehold.it/200x200" alt="" class="user-image">
+                    <img src="https://images.unsplash.com/photo-1515626553181-0f218cb03f14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" alt="" class="user-image">
                 </div>
-                <div class="card-user-bio">
-                    <h4>Full Name</h4>
-                    <p>Email Here</p>
-                    <span class="location"><span class="location-icon fa fa-map-marker"></span><span
-                            class="location-text">City and State Here</span></span>
+                <div class="card-user-bio" id="profile-section">
                 </div>
             </div>
             <div class="card-user-container text-center" id="upcoming-events">
@@ -58,12 +59,11 @@
                 <table id="apiCall">
                     <tr>
                         <th>Event Name</th>
-                        <th>EventDate</th>
-                        <th>StartTime</th>
-                        <th>EndTime</th>
+                        <th>Event Date</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
                         <th>Event Type</th>
                         <th>Guest Count</th>
-                        <th>Description</th>
                         <th>Location</th>
                     </tr>  
                     </table>
@@ -71,5 +71,4 @@
     </div>
 <script src="assets/js/customer-profile.js"></script>
 </body>
-
 </html>
