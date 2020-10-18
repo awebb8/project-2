@@ -36,6 +36,7 @@ $(document).ready(function () {
 		console.log(newEvent);
 
 		if (!newEvent.eventName || !newEvent.guestCount || !newEvent.eventDate || !newEvent.startTime || !newEvent.endTime || !newEvent.address || !newEvent.city || !newEvent.state || !newEvent.zipCode || !newEvent.description) {
+			alert("Please Input All Fields");
 			return;
 		}
 

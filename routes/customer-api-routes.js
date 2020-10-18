@@ -94,13 +94,6 @@ module.exports = function (app) {
 	// 	res.redirect("/customer");
 	// });
 
-	// app.post("/api/login", passport.authenticate("local"), function(req,res) {
-	// 	console.log("told to post");
-	// 	console.log("user: " + req.user);
-	// 	console.log("user_id:" + user.id);
-	// 	res.json(req.user);
-	// 	// res.redirect("/customer-profile");
-	// })
 
 	  // get user by email
 	  app.get("/api/user/:email", function (req, res) {
@@ -146,12 +139,6 @@ module.exports = function (app) {
 		});
 	});
 
-	// app.get("/api/customer-create-event", function(req, res) {
-	// 	db.Event.findAll({})
-	// 	  .then(function(Event) {
-	// 		res.json(Event);
-	// 	  });
-	//   });
 
 	app.post("/api/customer-create-event", function (req, res) {
 		db.Event.create({
@@ -175,8 +162,21 @@ module.exports = function (app) {
 			});
 	});
 
+
+	app.get("/api/customer-profile/:id", function (req, res) {
+		db.Event.findOne({
+		  where: {
+			id: req.params.id
+		  }
+		})
+		  .then(function(dbEvent) {
+			res.json(dbEvent);
+		  });
+	  });
+
+
 	// Delete a customer event
-	app.delete("/api/events/:id", function (req, res) {
+	app.delete("/api/customer-profile/:id", function (req, res) {
 		db.Event.destroy({
 			where: {
 				id: req.params.id,
