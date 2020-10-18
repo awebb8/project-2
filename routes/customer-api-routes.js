@@ -99,6 +99,13 @@ module.exports = function (app) {
 		});
 	});
 
+	app.get("/api/customer-create-event", function(req, res) {
+		db.Event.findAll({})
+		  .then(function(Event) {
+			res.json(Event);
+		  });
+	  });
+
 	app.post("/api/customer-create-event", function (req, res) {
 		db.Event.create({
 			eventName: req.body.eventName,
