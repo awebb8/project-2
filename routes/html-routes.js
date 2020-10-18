@@ -1,8 +1,5 @@
-
-let event = [{eventName: "underwaterBasketesrsfas"}]
+let event = [{ eventName: "underwaterBasketesrsfas" }];
 module.exports = function (app) {
-
-
 	app.get("/main", function (req, res) {
 		res.render("../views/layouts/main");
 	});
@@ -22,7 +19,7 @@ module.exports = function (app) {
 	app.get("/customer-login", function (req, res) {
 		if (req.user) {
 			res.redirect("/customer-profile");
-		  }
+		}
 		//   res.sendFile(path.join(__dirname, "../views/partials/customer-login"));
 		res.render("../views/partials/customer-login");
 	});
@@ -32,7 +29,7 @@ module.exports = function (app) {
 	});
 
 	app.get("/customer", function (req, res) {
-		res.render("../views/layouts/customer-service-request");
+		res.render("../views/layouts/customer-profile");
 	});
 
 	app.get("/event", function (req, res) {
@@ -43,15 +40,15 @@ module.exports = function (app) {
 		res.render("../views/layouts/customer-create-event");
 	});
 
-  	app.get("/services", function (req, res) {
-    res.render("../views/layouts/customer-service-request");
-  	});
+	app.get("/services", function (req, res) {
+		res.render("../views/layouts/customer-service-request");
+	});
 
 	app.get("/vendor-bid", function (req, res) {
 		res.render("../views/layouts/vendor-bid");
 	});
 
 	app.get("/customer-profile", function (req, res) {
-		res.render("../views/customer-profile", {eventName: "Underwater basket weaving"})
-	})
+		res.render("../views/customer-profile", { eventName: "Underwater basket weaving" });
+	});
 };
