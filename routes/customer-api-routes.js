@@ -28,11 +28,19 @@ module.exports = function (app) {
 	});
 
 	app.get("/api/customer-profile", function (req, res) {
-		console.log("told to get")
 		db.Event.findAll(
 			{}
 			).then(Event => {
 				res.json(Event)
+		}).catch(err => console.log(err));
+	});
+
+
+	app.get("/api/customer-signup", function (req, res) {
+		db.Customer.findAll(
+			{}
+			).then(Customer => {
+				res.json(Customer)
 		}).catch(err => console.log(err));
 	});
 
