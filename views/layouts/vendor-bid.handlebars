@@ -20,38 +20,52 @@
              <h2 class="title-underline">MY BIDS</h2>
         </div>
     </div>
-    <div class="grid-x text-center">
-        <div class="cell small-6">
+    <div class="grid-x">
+    {{!-- Active Bid Section --}}
+        <div class="cell small-6 flex-container flex-dir-column">
             {{!-- ACTIVE BID CARD EXAMPLE 1 --}}
-            <div class="card">
-                <div class="card-section">
-                    <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card grid-x grid-padding-x services-card-active">
+                <div class="card-section align-justify">
+                    <div class="cell">
+                        <h5>Event Title</h5>
+                    </div>
+                     <div class="cell align-self-right">
+                        <h6>My Bid: $500.00</h6>
+                     </div>
                 </div>
-                <div class="card-section">
-                    <p>This is a simple card with an image inside a `.card-section`.</p>
+                <div class="card-section service-card-body">
+                    <p>Date - Time - Location</p>
                 </div>
-            </div>
-     
-            {{!-- ACTIVE BID CARD EXAMPLE 2 --}}
-            <div class="card">
-                <div class="card-section">
-                    <img src="assets/img/generic/rectangle-1.jpg">
-                </div>
-                <div class="card-section">
-                    <p>This is a simple card with an image inside a `.card-section`.</p>
+                <div class="row grid-x grid-padding-x service-card-body">
+                    <div class="button-group align-spaced">
+                        <a class="button small pink-button" href="#">Delete Bid</a>
+                        <a class="button small pink-button" href="#">Details</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="cell small-6">
+    {{!-- Accepted Bid Section --}}
+        <div class="cell small-6 flex-container flex-dir-column">
             {{!-- ACCEPTED BID CARD EXAMPLE 1 --}}
-            <div class="card">
-                <div class="card-section">
-                    <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card grid-x grid-padding-x services-card-accepted">
+                <div class="card-section align-justify">
+                    <div class="cell">
+                        <h5>Event Title</h5>
+                    </div>
+                     <div class="cell align-self-right">
+                        <h6>My Bid: $500.00</h6>
+                     </div>
                 </div>
-                <div class="card-section">
-                    <p>This is a simple card with an image inside a `.card-section`.</p>
+                <div class="card-section service-card-body">
+                    <p>Date - Time - Location</p>
                 </div>
+                <div class="row grid-x grid-padding-x service-card-body">
+                    <div class="button-group align-spaced">
+                        <a class="button small pink-button" href="#">Delete Bid</a>
+                        <a class="button small pink-button" href="#">Details</a>
+                    </div>
                 </div>
+            </div>
         </div>
     </div>  
 </div>

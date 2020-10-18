@@ -100,6 +100,7 @@ body{
 .yellow-button:focus {
   background-color: rgb(0, 0, 0);
   color: #D60042;
+  border: solid 2px #FDC366;
   border-radius: 25px;
   cursor: pointer;
 }
@@ -113,6 +114,7 @@ body{
 .pink-button:focus {
   background-color: rgb(0, 0, 0);
   color: #FDC366;
+  border: solid 2px #D60042;
   border-radius: 25px;
   cursor: pointer;
 }
@@ -211,4 +213,34 @@ label {
 }
 li {
   list-style-type: none;
+}
+.services-card-active h5,
+.services-card-accepted h5 {
+  border-bottom: solid white 1px;
+  padding-bottom: 5px;
+  
+}
+.services-card-active h6,
+.services-card-accepted h6 {
+  font-weight: bold;
+  
+}
+.services-card-active {
+  background-color: black;
+  border-radius: 25px;
+  padding: 5px;
+  margin-right: 5%;
+  color: white;
+} 
+.services-card-accepted {
+  background-color: #FDC366;
+  border-radius: 25px;
+  margin-left: 5%;
+  padding: 5px;
+  color: #D60042;
+} 
+.service-card-body {
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 30px;
 }
