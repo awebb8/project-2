@@ -13,10 +13,19 @@ $(document).ready(function() {
         });
     }
     let buildEvents = (parameter) => {
-        for (var i =0; i <parameter.length; i++) {
-            $("#apiCall").append(`<p>Event Name: ${parameter[i].eventName}</p>`)
+        for (var i = 0; i < parameter.length; i++) {  
+            $("#apiCall").append(`
+            <tr>
+            <td>${parameter[i].eventName}</td>
+            <td>${parameter[i].eventDate}</td>
+            <td>${parameter[i].startTime}</td>
+            <td>${parameter[i].endTime}</td>
+            <td>${parameter[i].eventType}</td>
+            <td>${parameter[i].GuestCount}</td>
+            <td id ="descriptionInfo"> Click for more info </td>
+            <td>${parameter[i].city},${parameter[i].state},${parameter[i].zipCode}</td>
+            </tr>`)
         }
-
     } 
     getAllEvents();
 })

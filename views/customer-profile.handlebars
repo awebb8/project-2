@@ -25,11 +25,7 @@
   </div>
 </div>
     
-                        {{eventName}}
-                        
-                    {{!-- {{else}}
-                    <p>No events available iwjaelfkjs.</p> --}}
-           <p id="apiCall"></p>         
+
 
     <div class="holy-grail-grid">
         <div class="holy-grail-header">
@@ -59,20 +55,18 @@
             </div>
             <div class="card-user-container text-center" id="upcoming-events">
                 <h3> My Upcoming Events</h3>
-                <table>
-                    {{#each newEvent}}
+                <table id="apiCall">
                     <tr>
-                        <th>{{eventName}}</th>
-                        <th>{{eventDate}}</th>
-                        <th>{{startTime}}</th>
-                        <th>{{endTime}}</th>
-                        <th>{{address}}</th>
-                        <th>{{city}}</th>
-                        <th>{{state}}</th>
-                        <th>{{zipcode}}</th>
-                    </tr>
-                    {{/each}}
-                </table>
+                        <th>Event Name</th>
+                        <th>EventDate</th>
+                        <th>StartTime</th>
+                        <th>EndTime</th>
+                        <th>Event Type</th>
+                        <th>Guest Count</th>
+                        <th>Description</th>
+                        <th>Location</th>
+                    </tr>  
+                    </table>
         </div>
     </div>
 <script src="assets/js/customer-profile.js"></script>
