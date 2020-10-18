@@ -20,6 +20,10 @@ module.exports = function (app) {
 	});
 
 	app.get("/customer-login", function (req, res) {
+		if (req.user) {
+			res.redirect("/customer-profile");
+		  }
+		//   res.sendFile(path.join(__dirname, "../views/partials/customer-login"));
 		res.render("../views/partials/customer-login");
 	});
 
