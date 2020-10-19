@@ -21,15 +21,16 @@ $(document).ready(function() {
 
     // loginUser does a post to our "api/login" route and if successful, redirects us the the vendor page
     function loginVendor(email) {
-        $.post("/api/vendor-login", {
-        email: email
-        })
-        .then(function() {
-            window.location.replace("/vendor");
-            // If there's an error, log the error
-        })
-        .catch(function(err) {
-            console.log(err);
-        });
+        window.location.replace("/vendor");
+        // $.post("/api/vendor-login", {
+        // email: email
+        // })
+        // .then(function() {
+        //     window.location.replace("/vendor");
+        //     // If there's an error, log the error
+        // })
+        // .catch(function(err) {
+        //     console.log(err);
+        // });
     }
 })

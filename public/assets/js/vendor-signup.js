@@ -3,7 +3,7 @@ $(document).ready(function() {
     var signUpForm = $("form.signup");
     var businessNameInput = $("input#business-name-input");
     var categorySelect = $("#category-select");
-    var stateInput = $("#state-input");
+    var stateInput = $("input#state-input");
     var firstNameInput = $("input#first-name-input");
     var lastNameInput = $("input#last-name-input");
     var emailInput = $("input#email-input");
@@ -21,12 +21,13 @@ $(document).ready(function() {
         email: emailInput.val().trim(),
         // password: passwordInput.val().trim()
       };
-  
-      if (!vendorData.email || !vendorData.business_Name || !vendorData.category || !vendorData.state || !vendorData.first_Name || !vendorData.last_Name) {
+      console.log(vendorData);
+      if (!vendorData.email || !vendorData.business_Name || !vendorData.category || !vendorData.first_Name || !vendorData.last_Name) {
         return;
       }
+      console.log(vendorData);
       // If we have an email and other inputs, run the signUpVendor function
-      signUpVendor(vendorData.business_Name, vendorData.category, vendorData.stateInput, vendorData.first_Name, vendorData.last_Name, vendorData.email);
+      signUpVendor(vendorData.business_Name, vendorData.category, vendorData.state, vendorData.first_Name, vendorData.last_Name, vendorData.email);
       businessNameInput.val("");
       categorySelect.val("");
       stateInput.val("");
@@ -35,27 +36,28 @@ $(document).ready(function() {
       emailInput.val("");
     //   passwordInput.val("");
     });
-  
+
     // Does a post to the signup route. If successful, we are redirected to the members page
     // Otherwise we log any errors
     function signUpVendor(business_Name, category, state, first_Name, last_Name, email) {
       $.post("/api/vendor-signup", {
         business_Name: business_Name,
         category: category,
-        state: state, 
+        state: state,
         first_Name: first_Name,
         last_Name: last_Name,
         email: email,
         // password: password
       })
         .then(function(data) {
-          window.location.replace("/vendor");
+          window.location.replace("/vendor-login");
           // If there's an error, handle it by throwing up a Foundation alert
         })
-        .catch(err => console.log(err));
+        .catch(handleLoginErr);
     }
   
     function handleLoginErr(err) {
+      window.location.replace("/vendor-login");
       $("#alert .msg").text(err.responseJSON);
       $("#alert").fadeIn(500);
     }
