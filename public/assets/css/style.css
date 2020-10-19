@@ -254,13 +254,6 @@ li {
   margin-bottom: 30px;
 }
 
-/* .past-event {
-  background: black;
-  color: white;
-  border-radius: 25px;
-  margin-left: 25px;
-} */
-
 .profile-bar {
   font-family: 'Cookie', cursive;
 }
@@ -268,4 +261,9 @@ li {
 .profile-events {
   font-family: 'Cookie', cursive;
   border-bottom: solid 1px  #D60042;
+}
+
+.services-button {
+  margin-left: auto;
+  margin-right: auto;
 }
