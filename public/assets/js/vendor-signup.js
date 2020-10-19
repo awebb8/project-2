@@ -3,6 +3,7 @@ $(document).ready(function() {
     var signUpForm = $("form.signup");
     var businessNameInput = $("input#business-name-input");
     var categorySelect = $("#category-select");
+    var stateInput = $("#state-input");
     var firstNameInput = $("input#first-name-input");
     var lastNameInput = $("input#last-name-input");
     var emailInput = $("input#email-input");
@@ -14,19 +15,21 @@ $(document).ready(function() {
       var vendorData = {
         business_Name: businessNameInput.val().trim(),
         category: categorySelect.val(),
+        state: stateInput.val(),
         first_Name: firstNameInput.val().trim(), 
         last_Name: lastNameInput.val().trim(),
         email: emailInput.val().trim(),
         // password: passwordInput.val().trim()
       };
   
-      if (!vendorData.email || !vendorData.business_Name || !vendorData.category || !vendorData.first_Name || !vendorData.last_Name) {
+      if (!vendorData.email || !vendorData.business_Name || !vendorData.category || !vendorData.state || !vendorData.first_Name || !vendorData.last_Name) {
         return;
       }
       // If we have an email and other inputs, run the signUpVendor function
-      signUpVendor(vendorData.business_Name, vendorData.category, vendorData.first_Name, vendorData.last_Name, vendorData.email);
+      signUpVendor(vendorData.business_Name, vendorData.category, vendorData.stateInput, vendorData.first_Name, vendorData.last_Name, vendorData.email);
       businessNameInput.val("");
       categorySelect.val("");
+      stateInput.val("");
       firstNameInput.val("");
       lastNameInput.val("");
       emailInput.val("");
@@ -35,10 +38,11 @@ $(document).ready(function() {
   
     // Does a post to the signup route. If successful, we are redirected to the members page
     // Otherwise we log any errors
-    function signUpVendor(business_Name, category, first_Name, last_Name, email) {
+    function signUpVendor(business_Name, category, state, first_Name, last_Name, email) {
       $.post("/api/vendor-signup", {
         business_Name: business_Name,
         category: category,
+        state: state, 
         first_Name: first_Name,
         last_Name: last_Name,
         email: email,
