@@ -32,7 +32,8 @@ $(document).ready(function() {
             </tr>`)
 
             $(".holy-grail-left").append(`
-            <h4> Event Description:</h4><p>${eventDescription}</p>`)
+            <h3>${parameter[i].eventName} description:</h3>
+            <p>${eventDescription}</p>`)
 
             $(".alert").on("click", handleEventDelete);
 
@@ -71,7 +72,7 @@ $(document).ready(function() {
         for (var i = 0; i < parameter.length; i++) {  
             $("#profile-section").append(`
             <h4>${parameter[i].first_Name} ${parameter[i].last_Name}</h4>
-            <p>Email: ${parameter[i].email}</p>
+            <h4>Email: ${parameter[i].email}</h4>
             `)
         }
     } 

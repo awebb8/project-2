@@ -1,11 +1,3 @@
-// $(document).ready(function() {
-//     // This file just does a GET request to figure out which user is logged in
-//     // and updates the HTML on the page
-//     $.get("/api/vendor_data").then(function(data) {
-//       $(".vendor-name").text(data.email);
-//     });
-// });
-
 $(document).ready(function() {
   let getAllEvents = () =>{
       $.get("/api/customer-profile", function (data) {
@@ -34,8 +26,9 @@ $(document).ready(function() {
           <button class ="alert button" id ="${parameter[i].id}"> Not Interested </button></td>
           </tr>`)
 
-          $(".holy-grail-left").append(`
-          <h4> Event Description:</h4><p>${eventDescription}</p>`)
+          $("#event-details").append(`
+          <h3>${parameter[i].eventName} description:</h3>
+          <p>${eventDescription}</p>`)
 
           $(".alert").on("click", handleEventDelete);
 
@@ -81,6 +74,9 @@ $(document).ready(function() {
   getCustomerProfile();
 
 
+  $("#vendor-event-details").on("click", function(event){
+    $("#event-details").removeClass("hide");
 
+  })
 
 })
